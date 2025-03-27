@@ -1,0 +1,110 @@
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-image: url(morang.jpg) ;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #FF1493;
+  text-shadow: 2px 2px 4px rgba(255, 0, 127, 0.3);
+  font-size: 2.5em;
+}
+
+.voltar-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FF69B4;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #FF1493;
+  transform: scale(1.05);
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+}
+
+.video-card h3 {
+  color: #FF1493;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-card p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  background-color: rgba(255, 20, 147, 0.7);
+  border-radius: 0 0 15px 15px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .video-card {
+    max-width: 100%;
+  }
+}
